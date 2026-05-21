@@ -4,6 +4,15 @@
   "description": "Local web dashboard for Codex and Claude Code usage across local and SSH-accessible machines.",
   "type": "module",
   "license": "MIT",
+  "author": "Hongda Chen",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adancurusul/agent-usage-dashboard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Adancurusul/agent-usage-dashboard/issues"
+  },
+  "homepage": "https://github.com/Adancurusul/agent-usage-dashboard#readme",
   "bin": {
     "agent-usage-dashboard": "bin/agent-usage-dashboard.mjs"
   },
