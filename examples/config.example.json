@@ -1,0 +1,45 @@
+{
+  "discoverAragornResources": true,
+  "resourceOverrides": {
+    "existing-aragorn-resource-id": {
+      "label": "Readable Display Name"
+    }
+  },
+  "pricing": {
+    "ttlMs": 86400000,
+    "models": {
+      "example-model-prefix": {
+        "input": 1.25,
+        "cached": 0.125,
+        "cacheCreation": 1.25,
+        "output": 10
+      }
+    }
+  },
+  "history": {
+    "enabled": true,
+    "dbDir": "./db",
+    "retentionDays": 180,
+    "backfillDays": 180
+  },
+  "resources": [
+    {
+      "id": "team-mac",
+      "label": "Team Mac",
+      "sshHost": "team-mac",
+      "enabled": true,
+      "codexHome": "~/.codex",
+      "claudeHome": "~/.claude"
+    },
+    {
+      "id": "prod-vps",
+      "label": "Prod VPS",
+      "sshHost": "ubuntu@203.0.113.10",
+      "enabled": true,
+      "usage": {
+        "codex_home": "~/.codex",
+        "claude_home": "~/.claude"
+      }
+    }
+  ]
+}

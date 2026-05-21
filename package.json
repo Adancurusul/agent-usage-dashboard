@@ -1,0 +1,41 @@
+{
+  "name": "agent-usage-dashboard",
+  "version": "0.1.0",
+  "description": "Local web dashboard for Codex and Claude Code usage across local and SSH-accessible machines.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "agent-usage-dashboard": "bin/agent-usage-dashboard.mjs"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "docs/",
+    "examples/",
+    "skills/",
+    "README.md",
+    "LICENSE",
+    "AGENTS.md"
+  ],
+  "scripts": {
+    "check": "node --check bin/agent-usage-dashboard.mjs && node --check lib/aggregates.mjs && node --check lib/cli-args.mjs && node --check lib/cli-output.mjs && node --check lib/dashboard-page.mjs && node --check lib/dates.mjs && node --check lib/formatting.mjs && node --check lib/history-store.mjs && node --check lib/log-loaders.mjs && node --check lib/pricing.mjs && node --check lib/redaction.mjs && node --check lib/remote-exporter.mjs && node --check lib/report-page.mjs && node --check lib/server.mjs && node --check lib/sources.mjs && node --check lib/usage-math.mjs && node --check lib/usage-service.mjs",
+    "pack:dry-run": "npm pack --dry-run",
+    "serve": "node bin/agent-usage-dashboard.mjs serve --port 8790",
+    "start": "npm run serve",
+    "daily": "node bin/agent-usage-dashboard.mjs daily --json",
+    "usage": "node bin/agent-usage-dashboard.mjs usage --json",
+    "sources": "node bin/agent-usage-dashboard.mjs sources --json"
+  },
+  "keywords": [
+    "codex",
+    "claude-code",
+    "usage",
+    "dashboard",
+    "ssh",
+    "aragorn"
+  ],
+  "engines": {
+    "node": ">=18.17"
+  },
+  "dependencies": {}
+}
