@@ -12,7 +12,7 @@ This binds to `127.0.0.1` by default. For a monitor on another machine:
 agent-usage-dashboard serve --host 0.0.0.0 --port 8790
 ```
 
-There is no built-in authentication, so use a trusted network, VPN, tunnel, or authenticated reverse proxy before exposing the API.
+There is no built-in authentication, so use a trusted network, VPN, tunnel, or authenticated reverse proxy before exposing the API. Non-localhost binds enable API redaction by default for project paths, hostnames, source labels, session ids, config paths, and detailed health metadata.
 
 Probe:
 
