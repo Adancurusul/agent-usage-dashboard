@@ -79,7 +79,7 @@ curl -s "http://127.0.0.1:8790/api/usage?since=YYYY-MM-DD&until=YYYY-MM-DD&refre
 npx -y agent-usage-dashboard usage --app-dir ./agent-usage-dashboard --since YYYY-MM-DD --until YYYY-MM-DD --refresh --json
 ```
 
-The web server is localhost-only by default. If the user intentionally exposes it with `serve --host 0.0.0.0`, use `http://<machine-ip>:8790/api/...`; mention that there is no built-in auth.
+The web server is localhost-only by default. If the user intentionally exposes it with `serve --host 0.0.0.0`, use `http://<machine-ip>:8790/api/...`; mention that there is no built-in auth and that external binds enable API redaction for project paths, hostnames, source labels, session ids, config paths, and detailed health metadata.
 
 ## Fields To Report
 
