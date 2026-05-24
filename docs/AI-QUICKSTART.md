@@ -97,7 +97,7 @@ For another machine to call the Web API, the service must be started with:
 npx -y agent-usage-dashboard serve --app-dir ./agent-usage-dashboard --host 0.0.0.0 --port 8790
 ```
 
-There is no built-in authentication. Use this only on a trusted network, tunnel, VPN, or authenticated reverse proxy. External binds enable API redaction by default for project paths, hostnames, source labels, session ids, config paths, and detailed health metadata.
+There is no built-in authentication. Use this only on a trusted network, tunnel, VPN, or authenticated reverse proxy. External binds enable API redaction by default for project paths, hostnames, source labels, session ids, config paths, source alert reasons, and detailed health metadata.
 
 Use `refresh=1` only when intentionally re-reading local and SSH logs:
 

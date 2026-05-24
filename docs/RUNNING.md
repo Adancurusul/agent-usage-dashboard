@@ -67,7 +67,7 @@ To let another machine on your network call the Web UI or API:
 agent-usage-dashboard serve --host 0.0.0.0 --port 8790
 ```
 
-Sensitive API redaction is enabled by default when binding to a non-localhost host. It masks project paths, hostnames, source labels, session ids, config paths, and detailed health metadata while keeping source ids usable for filters. Keep the service behind Tailscale, a VPN, an SSH tunnel, or an authenticated reverse proxy; there is no built-in authentication.
+Sensitive API redaction is enabled by default when binding to a non-localhost host. It masks project paths, hostnames, source labels, session ids, config paths, source alert reasons, and detailed health metadata while keeping source ids usable for filters. Keep the service behind Tailscale, a VPN, an SSH tunnel, or an authenticated reverse proxy; there is no built-in authentication.
 
 Then access:
 

@@ -63,4 +63,4 @@ Check stale fallback behavior after a source has been scanned successfully:
 
 If the remote does not have Codex or Claude Code logs, leave the source enabled. The dashboard should show zero events rather than requiring a private workaround.
 
-`npx ... serve` is not a permanent daemon. For long-running service mode, use tmux, launchd, systemd, pm2, Docker, or another process manager. Bind to `127.0.0.1` by default; use `--host 0.0.0.0` only for intentional external access behind a trusted network or authenticated proxy. External binds enable API redaction by default for project paths, hostnames, source labels, session ids, config paths, and detailed health metadata.
+`npx ... serve` is not a permanent daemon. For long-running service mode, use tmux, launchd, systemd, pm2, Docker, or another process manager. Bind to `127.0.0.1` by default; use `--host 0.0.0.0` only for intentional external access behind a trusted network or authenticated proxy. External binds enable API redaction by default for project paths, hostnames, source labels, session ids, config paths, source alert reasons, and detailed health metadata.
