@@ -31,6 +31,11 @@ test("redactUsagePayload masks source alert reasons derived from source errors",
       hosts: ["private-host"],
       engines: ["codex"],
     },
+    history: {
+      backfill: {
+        reason: "served from saved daily history",
+      },
+    },
   });
 
   assert.equal(redacted.sourceAlerts[0].label, "(redacted source)");
@@ -40,4 +45,5 @@ test("redactUsagePayload masks source alert reasons derived from source errors",
   assert.deepEqual(redacted.availableFilters.hosts, ["(redacted host)"]);
   assert.equal(redacted.availableFilters.sources[0].id, "private-host-codex");
   assert.equal(redacted.availableFilters.sources[0].label, "(redacted source)");
+  assert.equal(redacted.history.backfill.reason, "served from saved daily history");
 });
