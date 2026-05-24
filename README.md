@@ -174,7 +174,7 @@ Give another AI assistant either this README or `docs/AI-QUICKSTART.md`. If it o
 - Use SSH config, ssh-agent, hardware keys, or normal host aliases.
 - Saved history stores aggregate usage rows, source health, hourly rows, project/session ids, and model totals.
 - Full prompts, responses, transcripts, project files, and secrets are not copied into history.
-- Treat project paths, hostnames, source labels, session ids, and token totals as potentially sensitive metadata. External-bind API redaction masks these identifying fields where practical while keeping source ids usable for filters.
+- Treat project paths, hostnames, source labels, session ids, source alert reasons, and token totals as potentially sensitive metadata. External-bind API redaction masks these identifying fields where practical while keeping source ids usable for filters.
 - The web server binds to `127.0.0.1` by default. Use `--host 0.0.0.0` only behind Tailscale, VPN, SSH tunnel, or a reverse proxy with auth.
 
 ## Troubleshooting

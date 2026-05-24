@@ -248,7 +248,7 @@ agent-usage-dashboard serve --host 0.0.0.0 --port 8790
 
 There is no built-in authentication. Prefer Tailscale, VPN, SSH tunnel, or a reverse proxy with authentication for remote access.
 
-When the server binds to a non-localhost host, sensitive API redaction is enabled by default. It masks project paths, hostnames, source labels, session ids, config paths, and detailed health metadata while keeping source ids usable for filters. You can force the same behavior with `--redact-sensitive` or disable it with `--no-redact-sensitive` only on a trusted network.
+When the server binds to a non-localhost host, sensitive API redaction is enabled by default. It masks project paths, hostnames, source labels, session ids, config paths, source alert reasons, and detailed health metadata while keeping source ids usable for filters. You can force the same behavior with `--redact-sensitive` or disable it with `--no-redact-sensitive` only on a trusted network.
 
 ## Security Rules
 

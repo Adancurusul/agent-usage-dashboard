@@ -106,7 +106,7 @@ Pricing fields:
 
 The dashboard does not ship a built-in provider price table. Add `pricing.models`, `pricing.path`, or `pricing.url` in config to estimate new models. URL price tables are cached for `pricing.ttlMs` and are not fetched on every request.
 
-When the service is bound to a non-localhost host, API redaction is enabled by default. Redacted responses mask project paths, hostnames, source labels, session ids, config paths, and detailed health metadata while keeping source ids usable for filters. Use `--redact-sensitive` to force that behavior on localhost.
+When the service is bound to a non-localhost host, API redaction is enabled by default. Redacted responses mask project paths, hostnames, source labels, session ids, config paths, source alert reasons, and detailed health metadata while keeping source ids usable for filters. Use `--redact-sensitive` to force that behavior on localhost.
 
 `sources --json` and `/api/sources` include source ids safe to pass to `--source`. They intentionally do not return private keys, tokens, or full SSH config.
 
